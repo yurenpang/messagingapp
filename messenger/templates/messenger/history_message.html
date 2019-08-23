@@ -1,0 +1,17 @@
+{% extends 'messenger/base.html' %}
+
+{% block content %}
+
+    {% for message in message_list %}
+        <div class = "container">
+            <span>
+                {{message.sender}} &nbsp;
+                {{message.date}}
+            </span>
+
+            <br>
+            <p>Message: {{message.text}}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}

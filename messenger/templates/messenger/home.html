@@ -1,0 +1,19 @@
+{% extends 'messenger/base.html' %}
+
+{% block content %}
+  <div class = "container">
+      <h4 class = "d-flex justify-content-center">Welcome, {{ user.username }}!</h4>
+      <h6 class = "d-flex justify-content-center">Here are some recent messages: </h6>
+      <br>
+
+      <div class = d-flex justify-content-center>
+          {% for message in messages %}
+            <div class="container">
+                {{message.date}}
+                <p>{{message.text}}</p>
+            </div>
+          {% endfor %}
+      </div>
+  </div>
+
+{% endblock %}

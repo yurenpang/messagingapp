@@ -1,0 +1,19 @@
+{% extends 'messenger/base.html' %}
+
+{% block content %}
+
+    {% for message in message_list %}
+        <div class="container">
+            <span>
+                {{message.sender}} &nbsp;
+                {{message.date}}
+            </span>
+
+            <br>
+            <p>Message: {{message.text}}</p>
+            <a href="{% url 'edit' pk=message.pk %}">Edit</a>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}
