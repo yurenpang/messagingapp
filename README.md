@@ -26,12 +26,16 @@ Python 3.0+ and Django 2.0+
   ```
   
   <li>Make sure you have django 
+  
   ```
   pip install django
   ```
+  
   <li>Run the app
+  
   ```
   python manage.py runserver
   ```
+  
 </ul>
 
